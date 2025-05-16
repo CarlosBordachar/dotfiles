@@ -6,7 +6,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # lanzar dunst para las notificaciones popup
-pkill dunst
+pkill -x dunst
 dunst -conf $HOME/.config/dunst/dunstrc &
 
 # lanzar polybar
@@ -14,14 +14,14 @@ sleep 1
 $HOME/.config/polybar/launch.sh &
 
 # lanzar conky
-pkill conky
-conky --config $HOME/.config/conky/conky.conf &
+pkill -x conky
+#conky --config $HOME/.config/conky/conky.conf &
 conky --config $HOME/.config/conky/qclocktwo.conf &
 conky --config $HOME/.config/conky/shortcuts.conf &
 conky --config $HOME/.config/conky/macchiato.conf &
 
 # lanzar picom
-pkill picom
+pkill -x picom
 #pgrep -x picom > /dev/null || picom --config $HOME/.config/picom/picom.conf &
 # lo quito porque hace algunos menues muy transparentes
 # y la verdad que la transparencia no me llama tanto tanto.
@@ -58,9 +58,10 @@ bspc config focus_follows_pointer  true  # hace focus segun donde este el mouse
 # reglas y comportamiento de aplicaciones #
 ###########################################
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
+bspc rule -a firefox-esr desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Thunar desktop='^5' follow=on
 bspc rule -a mpv state=fullscreen
+
