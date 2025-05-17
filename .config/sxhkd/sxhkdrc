@@ -1,3 +1,12 @@
+#######################################################
+# Shortcuts de sxhkd para BSPWM                       #
+#                                                     #
+# Debajo agregue la seccion CUSTOM con mis shortcuts. #
+#                                                     #
+# Para averiguar como referenciar una tecla,          #
+# usar la app xev (ya instalada en Debian).           #
+#######################################################
+
 #
 # wm independent hotkeys
 #
@@ -6,10 +15,6 @@
 super + Return
 	xfce4-terminal
 #	terminator
-
-# program launcher
-super + @space
-	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -44,18 +49,21 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+#super + {t,shift + t,s,f}
+#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+#comentado porque los cambio por efecto "toggle", ver en custom
 
 # set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+#super + ctrl + {m,x,y,z}
+#	bspc node -g {marked,locked,sticky,private}
+#comentado porque no utilizo los flags y libero la M para otro shortcut
 
 #
 # focus/swap
 #
 
 # focus the node in the given direction
+#super + {_,shift + }{Left,Down,Up,Right}
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
@@ -72,8 +80,8 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+#super + {grave,Tab}
+#	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -90,6 +98,7 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
+#super + ctrl + {Left,Down,Up,Right}
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
@@ -110,13 +119,88 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
+#super + alt + {Left,Down,Up,Right}
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
+#super + alt + shift + {Left,Down,Up,Right}
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# Custom
+#
+
+# toggle window state: tiled, pseudo_tiled, fullscreen, floating
+#super + {t,shift + t,f,shift + f}
+#	bspc node --state {\~tiled,\~pseudo_tiled,\~fullscreen,\~floating}
+# source: https://github.com/Ferryistaken/dots/blob/master/.config/sxhkd/sxhkdrc
+#lo mismo escrito mas limpio
+super + {_, shift + }{t,f}
+	bspc node --state {\~tiled,\~pseudo_tiled,\~fullscreen,\~floating}
+
+# Move current window to a pre-selected space
+# source: https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/
+super + ctrl + m
+	bspc node -n last.!automatic
+
+# Rotate tree
+# source: https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/
+super + shift + {d,a}
+	bspc node @/ -C {forward,backward}
+
+# Send to desktop and follow
+# source: https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/
+super + ctrl + shift + {1-9,0}
+	bspc node -d '^{1-9,10}' --follow
+
+#
+# Apps
+#
+
+# toggle terminal drop down (like quake/cs console)
+super + shift + Return
+	xfce4-terminal --drop-down
+
+
+# launcher dmenu
+super + space
+	dmenu_run
+
+# launcher rofi
+super + d
+	rofi -show drun
+
+# launcher rofi
+super + alt + d
+	rofi -combi-modi drun,run,ssh -show combi
+
+# Alt + Tab de Windows
+super + Tab
+	rofi -show window
+
+# launcher poweroff
+#super + alt + x
+ctrl + shift + Escape
+	$HOME/.config/rofi/powermenu.sh
+# sino probar instalando wlogout
+
+# (b)lock screen con slock de suckless tools
+super + ctrl + alt + l
+	slock
+
+# firefox
+super + alt + f
+	firefox-esr --private-window
+
+# file explorer - thunar
+#super + alt + e
+super + e
+	thunar
+
+
