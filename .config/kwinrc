@@ -22,5 +22,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][fe908a70-8506-5a33-83b8-8da7bf38e571]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Windows]
+AutoRaise=true
+AutoRaiseInterval=350
+FocusPolicy=FocusFollowsMouse
+
 [Xwayland]
 Scale=1
