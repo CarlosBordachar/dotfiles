@@ -38,4 +38,6 @@ ColorSelection=#cad3f5
 ColorSelectionBackground=#5b6078
 ColorSelectionUseDefault=FALSE
 TabActivityColor=#f5a97f
+FontName=CommitMono Nerd Font Mono 12
+CellHeightScale=1.100000
 
