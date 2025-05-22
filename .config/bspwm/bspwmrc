@@ -5,6 +5,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # polkit para abrir apps con sudo
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
+# wallpaper
+xwallpaper --stretch $HOME/.config/wallpaper.jpg &
+
 # lanzar dunst para las notificaciones popup
 pkill -x dunst
 dunst -conf $HOME/.config/dunst/dunstrc &
