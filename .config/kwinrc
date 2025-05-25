@@ -13,6 +13,9 @@ Name_4=Cuarto
 Number=4
 Rows=2
 
+[MouseBindings]
+CommandActiveTitlebar2=Close
+
 [Tiling]
 padding=4
 
