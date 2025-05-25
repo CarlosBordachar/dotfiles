@@ -112,6 +112,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# alias
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
