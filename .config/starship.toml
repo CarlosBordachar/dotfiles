@@ -1,17 +1,17 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](surface0)\
+[ ](bg:surface0 fg:mauve bold)\
 $os\
 $username\
 $hostname\
 $localip\
-[](bg:mantle fg:blue)\
+[ ](bg:surface0 fg:mauve)\
 $directory\
-[](bg:crust fg:mauve)\
+[ ](bg:mantle fg:red)\
 $git_branch\
 $git_status\
-[](bg:crust fg:red)\
+[](bg:crust fg:green)\
 $c\
 $rust\
 $golang\
@@ -21,11 +21,11 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](bg:crust fg:green)\
+[](bg:crust fg:sky)\
 $conda\
-[](bg:surface0 fg:sky)\
+[](bg:base fg:subtext0)\
 $time\
-[ ](fg:lavender)\
+[ ](fg:subtext0)\
 $cmd_duration\
 $line_break\
 $character"""
@@ -39,8 +39,8 @@ palette = 'catppuccin_macchiato'
 
 [os]
 disabled = false
-style = "bg:surface0 fg:blue"
-format = '[ $symbol ]($style)'
+style = "bg:surface0 fg:mauve"
+format = '[$symbol]($style)'
 
 [os.symbols]
 Windows = ""
@@ -65,25 +65,26 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:surface0 fg:blue"
+style_user = "bg:surface0 fg:mauve"
 style_root = "bg:surface0 fg:red"
-format = '[$user ]($style)'
+format = '[ $user]($style)'
 
 [hostname]
 disabled = false
-style = "bg:surface0 fg:green"
-format = '[@$hostname ]($style)'
+ssh_only = true
+style = "bg:surface0 fg:maroon"
+format = '[@$hostname]($style)'
 
 [localip]
 disabled = false
 ssh_only = true
-style = "bg:surface0 fg:yellow"
-format = '[@$localipv4 ]'
+style = "bg:surface0 fg:teal"
+format = '[@$localipv4]($style)'
 
 [directory]
-style = "bg:mantle fg:mauve"
-format = "[ $path ]($style)"
-truncation_length = 3
+style = "bg:mantle fg:blue"
+format = "[ $path]($style)"
+truncation_length = 4
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -96,7 +97,7 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol $branch ](bg:crust fg:maroon)]($style)'
+format = '[[ $symbol $branch ](bg:crust fg:red)]($style)'
 
 [git_status]
 style = "bg:crust"
@@ -105,64 +106,64 @@ format = '[[($all_status$ahead_behind )](bg:crust fg:red)]($style)'
 [nodejs]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [c]
 symbol = " "
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [rust]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [php]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [java]
 symbol = " "
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [kotlin]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [haskell]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version) ](bg:crust fg:green)]($style)'
 
 [python]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $version)(\(#$virtualenv\)) ](bg:crust fg:green)]($style)'
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](bg:crust fg:green)]($style)'
 
 [docker_context]
 symbol = ""
 style = "bg:crust"
-format = '[[ $symbol( $context) ](bg:crust fg:sky)]($style)'
+format = '[[ $symbol( $context) ](bg:crust fg:sky)]($style)'
 
 [conda]
 symbol = "  "
 style = "bg:crust fg:sky"
-format = '[$symbol$environment ]($style)'
+format = '[$symbol$environment ]($style)'
 ignore_base = false
 
 [time]
 disabled = false
 time_format = "%R"
 style = "bg:surface0 fg:lavender"
-format = '[[  $time ](bg:surface0 fg:lavender)]($style)'
+format = '[[  $time ](bg:base fg:subtext0)]($style)'
 
 [line_break]
 disabled = false
