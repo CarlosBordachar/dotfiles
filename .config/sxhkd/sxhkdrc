@@ -186,7 +186,7 @@ super + Tab
 
 # launcher poweroff
 #super + alt + x
-ctrl + shift + Escape
+super + shift + Escape
 	$HOME/.config/rofi/powermenu.sh
 # sino probar instalando wlogout
 
