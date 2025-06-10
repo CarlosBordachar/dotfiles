@@ -1,0 +1,29 @@
+import:
+  - ~/.config/alacritty/themes/catppuccin-macchiato.yml
+
+mouse:
+  hide_when_typing: true
+
+font:
+  normal:
+    family: CommitMono Nerd Font Mono
+    style: Regular
+  bold:
+    family: CommitMono Nerd Font Mono
+    style: Bold
+  italic:
+    family: CommitMono Nerd Font Mono
+    style: Italic
+
+  size: 12.0
+
+  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
+  # screens and make reading text a little easier.
+  scale_with_dpi: true
+
+  # Offset is the extra space around each character.
+  # `offset.y` can be thought of as modifying the ling spacing, and
+  # `offset.x` as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 2
