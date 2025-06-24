@@ -1,14 +1,17 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[ ](bg:surface0 fg:mauve bold)\
+[ ](bg:crust fg:mauve bold)\
+$time\
 $os\
 $username\
 $hostname\
 $localip\
-[ ](bg:surface0 fg:mauve)\
+[ ](bg:crust fg:mauve)\
+[](bg:mantle fg:crust)\
 $directory\
 [ ](bg:mantle fg:red)\
+[](bg:base fg:mantle)\
 $git_branch\
 $git_status\
 [](bg:crust fg:green)\
@@ -23,8 +26,6 @@ $haskell\
 $python\
 [](bg:crust fg:sky)\
 $conda\
-[](bg:base fg:subtext0)\
-$time\
 [ ](fg:subtext0)\
 $cmd_duration\
 $line_break\
@@ -38,8 +39,8 @@ $character"""
 palette = 'catppuccin_macchiato'
 
 [os]
-disabled = false
-style = "bg:surface0 fg:mauve"
+disabled = true
+style = "bg:crust fg:surface2"
 format = '[$symbol]($style)'
 
 [os.symbols]
@@ -64,26 +65,26 @@ Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
 [username]
-show_always = true
-style_user = "bg:surface0 fg:mauve"
-style_root = "bg:surface0 fg:red"
+show_always = false
+style_user = "bg:crust fg:surface2"
+style_root = "bg:crust fg:red"
 format = '[ $user]($style)'
 
 [hostname]
 disabled = false
 ssh_only = true
-style = "bg:surface0 fg:maroon"
+style = "bg:crust fg:maroon"
 format = '[@$hostname]($style)'
 
 [localip]
 disabled = false
 ssh_only = true
-style = "bg:surface0 fg:teal"
+style = "bg:crust fg:teal"
 format = '[@$localipv4]($style)'
 
 [directory]
-style = "bg:mantle fg:blue"
-format = "[ $path]($style)"
+style = "bg:mantle fg:mauve"
+format = "[$path]($style)"
 truncation_length = 4
 truncation_symbol = "…/"
 
@@ -96,12 +97,12 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:crust"
-format = '[[ $symbol $branch ](bg:crust fg:red)]($style)'
+style = "bg:base"
+format = '[[ $symbol $branch ](bg:base fg:red)]($style)'
 
 [git_status]
-style = "bg:crust"
-format = '[[($all_status$ahead_behind )](bg:crust fg:red)]($style)'
+style = "bg:base"
+format = '[[($all_status$ahead_behind )](bg:base fg:red)]($style)'
 
 [nodejs]
 symbol = ""
@@ -162,8 +163,8 @@ ignore_base = false
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:surface0 fg:lavender"
-format = '[[  $time ](bg:base fg:subtext0)]($style)'
+style = "bg:crust fg:surface0"
+format = '[[$time](bg:crust fg:surface0)]($style)'
 
 [line_break]
 disabled = false
@@ -179,11 +180,11 @@ vimcmd_visual_symbol = '[❮](bold fg:yellow)'
 
 [cmd_duration]
 show_milliseconds = true
-format = " in $duration "
-style = "bg:lavender"
+format = '[ in $duration ]($style)'
+style = "bg:base fg:overlay0"
 disabled = false
 show_notifications = true
-min_time_to_notify = 45000
+min_time_to_notify = 4500
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
