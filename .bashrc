@@ -113,3 +113,5 @@ if ! shopt -oq posix; then
 fi
 
 
+# launch starship
+eval "$(starship init bash)"
