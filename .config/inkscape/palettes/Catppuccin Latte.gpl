@@ -1,0 +1,30 @@
+GIMP Palette
+Name: Latte
+Columns: 5
+#Colors: 26
+220 138 120 dc8a78 Rosewater
+221 120 120 dd7878 Flamingo
+234 118 203 ea76cb Pink
+136  57 239 8839ef Mauve
+210  15  57 d20f39 Red
+230  69  83 e64553 Maroon
+254 100  11 fe640b Peach
+223 142  29 df8e1d Yellow
+ 64 160  43 40a02b Green
+ 23 146 153 179299 Teal
+  4 165 229 04a5e5 Sky
+ 32 159 181 209fb5 Sapphire
+ 30 102 245 1e66f5 Blue
+114 135 253 7287fd Lavender
+ 76  79 105 4c4f69 Text
+ 92  95 119 5c5f77 Subtext1
+108 111 133 6c6f85 Subtext0
+124 127 147 7c7f93 Overlay2
+140 143 161 8c8fa1 Overlay1
+156 160 176 9ca0b0 Overlay0
+172 176 190 acb0be Surface2
+188 192 204 bcc0cc Surface1
+204 208 218 ccd0da Surface0
+239 241 245 eff1f5 Base
+230 233 239 e6e9ef Mantle
+220 224 232 dce0e8 Crust
