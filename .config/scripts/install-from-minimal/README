@@ -1,0 +1,165 @@
+# Archivo README para la INSTALACION y CONFIGURACION de Debian 12 Bookworm
+
+Se detallan los pasos a seguir y las consideraciones a tener en cuenta
+para instalar y configurar las aplicaciones básicas de mayor uso
+en un instalación mínima límpia de Debian 12 - Bookworm.
+
+El equipo queda operativo y listo para ser usado luego del proceso completo.
+
+## Objetivo:
+
+Instalar KDE Plasma junto a las aplicaciones básicas que utilizo.
+Configurar las mismas con los dotfiles personales.
+
+## Requisitos:
+
+Instalación mínima de Debian GNU/Linux 12 - Bookworm - 64 bits.
+
+## Pasos:
+
+Son 3 grandes pasos: pre-install, install, post-install.
+
+### pre-install
+
+Aquí lo que se hará es configurar el HOME del usuario en un path específico
+que contenga el nombre de la distro y su version. En este caso será:
+
+- antes: /home/carlos
+- despues: /home/debian12/carlos
+
+Además se agregan los repositorios 'contrib' y 'non-free' a los sources.
+
+#### Motivo:
+
+De esta forma en la misma partición /home se podrán guardar los homes de
+distintas distros, utilizando todas el mismo usuario.
+
+Para poder instalar los paquetes de la GPU Nvidia.
+
+### install
+
+Aquí se instalará el escritorio KDE, junto con todas las aplicaciones,
+flatpak, pipewire, bluetooth y se deshabilitará la hibernación
+(script 01-install-apps.sh)
+
+En caso de corresponder se instalan los drivers Nvidia.
+(script 02-install-nvidia.sh)
+
+### post-install
+
+Se inicializa el sistema iniciando sesión para que KDE realice la configuración
+inicial por defecto. (ej: crea directorios Documents, Downloads, etc).
+
+Luego se copiarán los dotfiles personales, se instala starship y nerdfonts.
+(script 03-copy-dotfiles.sh)
+
+Además se debe terminar de configurar de forma manual (o con los
+dotfiles específicos):
+- Perfil de Firefox
+- OBS-Studio
+- Godot
+- VSCode (Codium)
+- Dotfiles como repositorio en /home
+
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+
+## Comandos:
+
+Los comandos a ejecutar en cada uno de los 3 pasos.
+
+### Paso 1: pre-install
+
+- 1.1: Set HOME incluye nombre de la distro:
+Ejecutar línea por línea (algunas son simbólicas, interpretar por comentario)
+
+    #### set home path with distro name ####
+    # set root password
+    sudo passwd root
+
+    # logout and login as root
+    exit
+    root
+    # insert password
+
+    # with root create new directories
+    mkdir /home/debian12
+    usermod -m -d /home/debian12/carlos carlos
+
+    # edit template for new users
+    nano /etc/default/useradd
+
+    # in nano set line as and save and exit
+    HOME=/home/debian12
+
+    # reboot
+    systemctl reboot
+
+    # unset root password, login as root user (su)
+    root
+    #insert password
+
+    # or login as root if we login first as user, so...
+    su
+
+    # delete pass and lock (disable) user root
+    passwd -dl root
+
+    # exit and logint as user
+    exit
+
+- 1.2: Agrgar repositorios a sources:
+Ejecutar línea por línea (algunas son simbólicas, interpretar por comentario)
+
+    #### add contrib y non-free a sources ####
+    sudo apt edit-sources
+
+    # add "contrib" and "non-free" keywords in each line
+
+    # update repositories with new sources
+    sudo apt update
+
+### Paso 2: install
+
+- 2.1: Instalar aplicaciones:
+Ejecutar el script 01-install-apps.sh
+
+    bash 01-install-apps.sh
+
+- 2.2: Instalar drivers Nvidia:
+Solo si tenemos una placa de video Nvidia.
+Ejecutar el script 02-install-nvidia.sh
+
+    bash 02-install-nvidia.sh
+
+- 2.3: Copiar ssh-key al directorio "~/.ssh" (si no existe, crearlo)
+Luego asegurar que tienen los permisos correctos (id_rsa o id_ed25519):
+
+    chmod 600 ~/.ssh/id_rsa
+    chmod 644 ~/.ssh/id_rsa.pub
+    chmod 700 ~/.ssh
+
+Test si quedo todo bien. Nos tiene que devolver nuestro usuario.
+
+    ssh -T git@github.com
+
+### Paso 3: post-install
+
+- 3.1: Iniciar sesión en KDE Plasma.
+
+- 3.2: Copiar dotfiles:
+Ejecutar el script 03-copy-dotfiles.sh
+
+    bash 03-copy-dotfiles.sh
+
+- 3.3: Demás configuraciones:
+Buscarlas en Obsidian, que tiene los repositorios indicados.
+
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+
+dotfiles repository: https://github.com/CarlosBordachar/dotfiles.git
+branch: debian12-kde
+date: 2025-07
