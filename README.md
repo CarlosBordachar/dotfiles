@@ -3,6 +3,10 @@
 Distro : **Debian 12 Bookworm**
 DE : **KDE Plasma**
 
+## Install
+
+To make a full install of apps and dotfiles from a clean Debian 12 minimal install, go to: [.config/scripts/install-from-minimal](.config/scripts/install-from-minimal) and follow instructions on [README](.config/scripts/install-from-minimal/README).
+
 ## Apps
 
 Name : version
