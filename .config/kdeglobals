@@ -95,7 +95,6 @@ ForegroundVisited=68,71,90
 
 [DirSelect Dialog]
 DirSelectDialog Size=844,598
-History Items[$e]=file:$HOME/Videos/obs-studio,file:$HOME/Videos/obsstudio,file:$HOME/Videos/ObsStudio,file:$HOME/Projects/obsidian-vault-carlos
 
 [General]
 ColorScheme=Dracula
