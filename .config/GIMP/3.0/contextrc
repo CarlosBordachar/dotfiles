@@ -1,0 +1,15 @@
+# GIMP user context
+
+(tool "gimp-paintbrush-tool")
+(paint-info "gimp-paintbrush")
+(opacity 0.98999999999999999)
+(brush "2. Hardness 050")
+(dynamics "Pressure Size")
+(mybrush "Standard")
+(pattern "Pine")
+(gradient "FG to BG (RGB)")
+(palette "Macchiato")
+(font "Sans-serif")
+(tool-preset "Core Pointer")
+
+# end of user context

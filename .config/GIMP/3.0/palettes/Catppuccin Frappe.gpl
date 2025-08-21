@@ -1,0 +1,30 @@
+GIMP Palette
+Name: Frappe
+Columns: 5
+#Colors: 26
+242 213 207 f2d5cf Rosewater
+238 190 190 eebebe Flamingo
+244 184 228 f4b8e4 Pink
+202 158 230 ca9ee6 Mauve
+231 130 132 e78284 Red
+234 153 156 ea999c Maroon
+239 159 118 ef9f76 Peach
+229 200 144 e5c890 Yellow
+166 209 137 a6d189 Green
+129 200 190 81c8be Teal
+153 209 219 99d1db Sky
+133 193 220 85c1dc Sapphire
+140 170 238 8caaee Blue
+186 187 241 babbf1 Lavender
+198 208 245 c6d0f5 Text
+181 191 226 b5bfe2 Subtext1
+165 173 206 a5adce Subtext0
+148 156 187 949cbb Overlay2
+131 139 167 838ba7 Overlay1
+115 121 148 737994 Overlay0
+ 98 104 128 626880 Surface2
+ 81  87 109 51576d Surface1
+ 65  69  89 414559 Surface0
+ 48  52  70 303446 Base
+ 41  44  60 292c3c Mantle
+ 35  38  52 232634 Crust
