@@ -116,5 +116,5 @@ fi
 # launch starship
 eval "$(starship init bash)"
 
-# enable fzf shortcuts
-source /usr/share/doc/fzf/examples/key-bindings.bash
+# FZF: set up fzf key binding and fuzzy completion
+eval "$(fzf --bash)"

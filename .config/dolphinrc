@@ -1,25 +1,19 @@
-[$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+MenuBar=Disabled
+
+[ContentDisplay]
+UsePermissionsFormat=CombinedFormat
 
 [General]
-ShowFullPath=true
+FilterBar=true
 Version=202
-ViewPropsTimestamp=2025,3,9,2,43,19.835
+ViewPropsTimestamp=2025,8,20,4,47,17.47
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
-[KPropertiesDialog]
-1920x1080 screen: Height=616
-1920x1080 screen: Width=438
-
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
-
-[Search]
-What=Content
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer

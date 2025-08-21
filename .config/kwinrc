@@ -1,11 +1,11 @@
-[$Version]
-update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
+[Activities][LastVirtualDesktop]
+9e202eda-2b6e-401d-a137-8b5120e9f98d=63c9d456-2c2d-4e9c-abb0-c989fb057c46
 
 [Desktops]
-Id_1=95e11d47-be00-4383-89a6-c468a45a6d0b
-Id_2=c8ed5dfc-fa5f-42eb-8e27-1b582d65bb90
-Id_3=4c059c90-2061-4e84-adc0-864e58b58e8e
-Id_4=45c96479-a115-46e2-a26e-6cba7dd0bb16
+Id_1=63c9d456-2c2d-4e9c-abb0-c989fb057c46
+Id_2=14958f23-d0cd-43eb-92dc-d5dd5951f9fe
+Id_3=98662c8f-8e81-4853-9618-171d7006d3eb
+Id_4=a1abd948-c131-4622-864e-e09ba5f2ac0f
 Name_1=Principal
 Name_2=Secundario
 Name_3=Tercero
@@ -13,22 +13,11 @@ Name_4=Cuarto
 Number=4
 Rows=2
 
-[MouseBindings]
-CommandActiveTitlebar2=Close
-
 [Tiling]
 padding=4
 
-[Tiling][6ea3103c-344f-5405-80b4-d8ab7df3f905]
+[Tiling][b410d0f0-53c3-5940-ac86-37fa6b708c24]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Tiling][fe908a70-8506-5a33-83b8-8da7bf38e571]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
-
-[Windows]
-AutoRaise=true
-AutoRaiseInterval=350
-FocusPolicy=FocusFollowsMouse
 
 [Xwayland]
 Scale=1
