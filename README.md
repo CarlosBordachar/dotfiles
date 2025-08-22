@@ -13,6 +13,7 @@ Name : version
 
 - Bash : 5.2.37
 - [bat](https://github.com/sharkdp/bat) : 0.25.0
+- [delta](https://github.com/dandavison/delta) : 0.18.2
 - Dolphin : 25.04.3
 - [fzf](https://github.com/junegunn/fzf) : 0.60.3
   - [*From v0.48 or later changed how to setting up shell integration.*](https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration)
