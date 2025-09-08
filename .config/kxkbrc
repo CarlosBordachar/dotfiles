@@ -1,0 +1,4 @@
+[Layout]
+Model=pc105
+Options=caps:escape_shifted_capslock
+ResetOldOptions=true
