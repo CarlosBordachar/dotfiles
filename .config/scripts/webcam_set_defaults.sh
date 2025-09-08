@@ -107,7 +107,7 @@ pan_absolute_value=0                    # same default
 tilt_absolute_value=0                   # same default
 
 focus_automatic_continuous_value=0
-focus_absolute_value=15                 # 15 es la distancia del focus
+focus_absolute_value=20                 # 15 es la distancia del focus
                                         # (los valores que me funcionan bien son 15, 20, 25 mas/menos (de 5 en 5).
                                         # 15: arriba del monitor
                                         # 25: en el soporte

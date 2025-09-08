@@ -1,0 +1,19 @@
+Aquí se encuentran todos los archivos que son de configuración o similar,
+pero que su ubicación corresponde a las carpetas del sistema.
+
+Con lo cual debemos de mover dichos files a su correspondiente ubicación.
+
+Detalle de para que son cada uno:
+
+/etc/udev/rules.d/99-logitech-c920-set-defaults.rules
+Webcam Logitech c920.
+
+/etc/keyd/default.conf
+Keyboard mapping config for keyd app.
+
+/etc/modprobe.d/v4l2loopback.conf
+Config Virtual Camera for OBS-Studio.
+
+/etc/modules-load.d/v4l2loopback.conf
+Load Virtual Camera for OBS-Studio.
+

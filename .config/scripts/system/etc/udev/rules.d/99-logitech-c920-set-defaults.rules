@@ -1,0 +1,2 @@
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]*", ATTR{index}=="0", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="082d", SYMLINK+="webcam_c920"
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]*", ATTR{index}=="0", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="082d", RUN+="/home/debian13/carlos/.config/scripts/webcam_set_defaults.sh $devnode"
