@@ -21,10 +21,12 @@ for font in "${fonts[@]}"; do
     download_url="https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/${zip_file}"
     echo "Downloading $download_url"
     wget "$download_url"
-    unzip "$zip_file" -d "$fonts_dir"
+    unzip -n "$zip_file" -d "$fonts_dir"
     rm "$zip_file"
 done
 
 find "$fonts_dir" -name '*Windows Compatible*' -delete
+find "$fonts_dir" -name '*LICENSE*' -delete
+find "$fonts_dir" -name '*README*' -delete
 
 fc-cache -fv
