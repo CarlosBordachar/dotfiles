@@ -4,7 +4,7 @@
   [[default]]
     background_color = "#24273a"
     foreground_color = "#cad3f5"
-    palette = "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#a5adcb"
+    palette = "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#c6a0f6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#c6a0f6:#8bd5ca:#a5adcb"
   [[Catppuccin_Latte]]
     background_color = "#eff1f5"
     foreground_color = "#4c4f69"
@@ -16,7 +16,7 @@
   [[Catppuccin_Macchiato]]
     background_color = "#24273a"
     foreground_color = "#cad3f5"
-    palette = "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#a5adcb"
+    palette = "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#c6a0f6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#c6a0f6:#8bd5ca:#a5adcb"
   [[Catppuccin_Mocha]]
     background_color = "#1e1e2e"
     foreground_color = "#cdd6f4"
