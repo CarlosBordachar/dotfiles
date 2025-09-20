@@ -5,7 +5,7 @@ ColorScheme=catppuccin-macchiato
 Name=General-Catppuccin
 Parent=FALLBACK/
 TerminalColumns=131
-TerminalRows=34
+TerminalRows=36
 
 [Scrolling]
 HistorySize=2000
