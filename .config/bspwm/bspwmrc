@@ -5,9 +5,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # polkit para abrir apps con sudo
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
-# wallpaper
-xwallpaper --stretch $HOME/.config/wallpaper.jpg &
-
 # lanzar dunst para las notificaciones popup
 pkill -x dunst
 dunst -conf $HOME/.config/dunst/dunstrc &
@@ -32,6 +29,16 @@ pkill -x picom
 
 # lanzar nm-tray para información de conexión de red
 pgrep -x nm-tray > /dev/null || nm-tray &
+
+# teclado español
+#setxbmap -layout latam &
+
+# screen resolution
+$HOME/.config/xrandr/resolution.sh &
+
+# wallpaper
+sleep 1
+xwallpaper --stretch $HOME/.config/wallpaper.jpg &
 
 #######################
 # listado de desktops #
