@@ -1,107 +1,101 @@
--- Enable syntax processing
--- Activar resaltado de sintaxis
+-- enable syntax processing
 vim.cmd("syntax on")
 
--- Highlight matching [{()}]
--- Mostrar coincidencias de paréntesis, llaves, corchetes
-vim.opt.showmatch = true
-
--- Enable line number and relative line number
--- Mostrar números de línea (relativos)
+-- enable line number and relative line number
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Show the status line at the bottom
--- Mostrar la barra de estado
-vim.opt.laststatus = 2
+-- show the status line at the bottom
+vim.opt.laststatus = 3
 
--- Buscar recursivamente en subdirectorios (equivalente a set path+=**)
+-- find recursively in sub-directories
 vim.opt.path:append("**")
 
--- Allow backspacing over everything
--- Permitir retroceder sobre indentación, EOL y el comienzo
+-- allow backspacing over everything (indentation, EOL, and beginning)
 vim.opt.backspace = { "indent", "eol", "start" }
 
--- Allow auto-hiding of edited buffers
--- Permitir ocultar buffers sin guardar
+-- allow auto-hiding of edited buffers without save
 vim.opt.hidden = true
 
--- Disable audible bell
--- Desactivar sonido del 'bell' y usar visual bell
+-- disable audible bell
 vim.opt.errorbells = false
 vim.opt.visualbell = true
 
--- Ignore case in searches by default,
--- but make it case sensitive if an uppercase is entered
--- Búsqueda insensible a mayúsculas, pero sensible si hay mayúsculas
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- Enable mouse mode (scrolling, selection, etc)
--- Habilitar el ratón (para scroll, resize, etc.)
+-- enable mouse mode (scrolling, selection, etc)
 vim.opt.mouse:append("a")
 
--- Highlight search
--- Resaltar todas las coincidencias de búsqueda
-vim.opt.hlsearch = true
+-- search behavior
+vim.opt.hlsearch = true  -- highlight search
+vim.opt.incsearch = true  -- incremental search (as string is being typed)
+vim.opt.wrapscan = true  -- begin search from top of the file when nothing is found
+vim.opt.ignorecase = true  -- ignore case in search by default
+vim.opt.smartcase = true  -- make search case sensitive if an uppercase is entered
 
--- Incremental search (as string is being typed)
--- Búsqueda incremental mientras escribes
-vim.opt.incsearch = true
-
--- Copy indent from current line when starting a new line
--- Autoindentar nuevas líneas
+-- copy indent from current line when starting a new line
 vim.opt.autoindent = true
--- vim.opt.cindent = true  -- Descomentar si se trabaja con C/C++
+vim.opt.cindent = true  -- uncomment if working with C/C++
 
--- Mostrar el título de la ventana
+-- show tittle window
 vim.opt.title = true
 
--- Show command in bottom bar
--- Mostrar el comando actual en la barra inferior
+-- show command in bottom bar
 vim.opt.showcmd = true
+--vim.opt.cmdheight = 0
 
--- Highlight current line
--- Resaltar la línea actual
-vim.opt.cursorline = true
+-- highlight
+vim.opt.cursorline = true  -- highlight current line
+--vim.opt.cursorlineopt = "number"  -- highlight only number, not line/row
+--vim.opt.cursorlineopt = "screenline"  -- highlight only line/row, not number
+vim.opt.colorcolumn = "80"  -- highlight column 80
 
--- Visual autocomplete for command menu
--- Menú visual para autocompletar comandos
+
+-- visual autocomplete for command menu
 vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full,full"  -- command-line completion mode
 
--- Open new vertical split bottom and new horizontal splits right
--- Abrir divisiones (splits) abajo y a la derecha por defecto
-vim.opt.splitbelow = true
-vim.opt.splitright = true
+-- number of suggestions
+vim.opt.pumheight = 10  -- limit LSP completion items length to 10
 
--- Highlight column 80
--- Resaltar la columna 80 (útil para límites de código)
-vim.opt.colorcolumn = "80"
+-- split windows
+vim.opt.splitbelow = true  -- open new vertical split bottom
+vim.opt.splitright = true  -- open new horizontal split right
+vim.opt.splitkeep = "screen"  -- keep the text on the same screen line
 
--- Delays (used by LSP, autosave, etc)
--- Tiempo de actualización (usado por LSP, autoguardado, etc.)
+-- delays (used by LSP, autosave, etc)
 vim.opt.updatetime = 350
 
--- Always show the singcolumn
--- Mostrar siempre la columna de signos (para LSP, git, etc.)
+-- always show the singcolumn (for LSP, git, etc)
 vim.opt.signcolumn = "yes"
 
--- Number of suggestions
--- Límite de sugerencias en el menú de autocompletado
-vim.opt.pumheight = 10
+-- minimal scroll off
+vim.opt.scrolloff = 4  -- minimal number of screen lines to keep above and below the cursor
+vim.opt.sidescrolloff = 8  -- minimal number of screen columns either side of cursor if wrap is `false`
+vim.opt.sidescroll = 2  -- make scrolling better, instead of wrap we scroll horizontally with the cursor
 
--- Minimal number of screen lines to keep above and below the cursor
--- Mantener 4 líneas alrededor del cursor al hacer scroll
-vim.opt.scrolloff = 4
-
--- Minimal number of screen columns either side of cursor if wrap is `false`
--- Mantener 8 columnas a los lados del cursor
-vim.opt.sidescrolloff = 8
+-- text wrapping
+vim.opt.wrap = false  -- don't wrap lines
+vim.opt.breakindent = true  -- line wrapping preserves indentation
+vim.opt.linebreak = true  -- primarily to prevent wrapping within words
+vim.opt.whichwrap:append('<>[]hl')  -- go to previous/next line with h,l,left arrow and right arrow when cursor reaches end/beginning of line
 
 -- width of a tab
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
+vim.opt.expandtab = true  -- use number of spaces to insert a <Tab>
+vim.opt.shiftwidth = 4  -- when we hit tab it moves 4 spaces
+vim.opt.tabstop = 4  -- setting auto indent to 4 spaces
+vim.opt.softtabstop = 4  -- option so make backspace delete entire tab
+vim.opt.smarttab = true  -- make tab behaviour smarter
+vim.opt.shiftround = true  -- Rounds the indent spacing to the next multiple of shiftwidth EG. If you have something 3 spaces in and hit < it will move 2 or 4 spaces depending on shiftwidth and line up
+vim.opt.list = true  -- show some invisible characters (tabs, ...
 
--- use number of spaces to insert a <Tab>
-vim.opt.expandtab = true
+-- highlight matching [{()}]
+vim.opt.showmatch = true
+vim.opt.matchpairs:append({ '<:>,「:」,『:』,【:】,“:”,‘:’,《:》' })  -- Characters that form pairs. The % command jumps from one to the other
+
+-- clipboard
+--vim.opt.clipboard = 'unnamedplus' -- share system clipboard but also retain nvim clipboard (see += compared
+
+-- modes
+vim.opt.virtualedit = "block"  -- allow cursor to move where the is no text in visual block mode
+
+--NOTE: ripgrep
+vim.opt.grepprg = 'rg --vimgrep'
