@@ -13,13 +13,14 @@ Name : version
 
 - Bash : 5.2.37
 - [bat](https://github.com/sharkdp/bat) : 0.25.0
+- [btop](https://github.com/aristocratos/btop) : 1.3.2
 - [delta](https://github.com/dandavison/delta) : 0.18.2
 - Dolphin : 25.04.3
 - [fzf](https://github.com/junegunn/fzf) : 0.60.3
 - [Gimp](https://www.gimp.org) : 3.0.4
 - [Inkscape](https://inkscape.org) : 1.4
 - KDE Plasma : 6.3.4
-- Kernel : 6.12.0
+- Kernel : 6.12
 - Konsole : 25.04.3
 - [MPV](https://github.com/mpv-player/mpv) : 0.40.0
 - [Neovim](https://github.com/neovim/neovim) : 0.10.4
