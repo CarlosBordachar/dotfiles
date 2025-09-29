@@ -4,8 +4,17 @@
 	name = CarlosBordachar
 	email = git@carlosbordachar.com
 
+[color "status"]
+    header = black normal
+    added = green normal
+    changed = yellow normal
+    untracked = cyan normal
+    branch = green normal
+    nobranch = normal normal
+    unmerged = red normal
+
 [color "branch"]
-	current = green reverse
+	current = reverse green normal bold
 	local = green
 	remote = red
 
