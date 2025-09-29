@@ -1,23 +1,24 @@
 local function map(mode, lhs, rhs, opts)
-   -- set default value if not specify
-   if opts.noremap == nil then
-      opts.noremap = true
-   end
-   if opt.silent == nil then
-      opts.silent = true
-   end
+   local options = { noremap = true, silent = true }
 
+   if opts then
+      if opts["desc"] then
+         opts["desc"] = "keymaps.lua: " .. opts["desc"]
+      end
+      options = vim.tbl_extend("force", options, opts)
+   end
+   
    vim.keymap.set(mode, lhs, rhs, opts)
 end
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = " "  -- space
+vim.g.maplocalleader = " "  -- space
 
--- better up/down
---vim.keymap.set({ "n", "x" }, "j", function()
---   return vim.v.count > 0 and "j" or "gj"
---end, { expr = true })
---vim.keymap.set({ "n", "x" }, "k", function()
---   return vim.v.count > 0 and "k" or "gk"
---end, { expr = true })
+-- Move Lines (from LazyVim)
+map("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+map("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+map("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 

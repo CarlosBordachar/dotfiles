@@ -27,19 +27,23 @@ vim.api.nvim_create_autocmd("TextYankPost", {
    end,
 })
 
--- Disable auto comment
-vim.api.nvim_create_autocmd("BufEnter", {
+-- turn on spell check for markdown and text file
+vim.api.nvim_create_augroup("SpellCheck", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+   group = "SpellCheck",
+   pattern = { "markdown", "text", "txt", "gitcommit", "mail" },
    callback = function()
-      vim.opt.formatoptions = { c = false, r = false, o = false }
+      vim.opt_local.spell = true
    end,
 })
 
--- turn on spell check for markdown and text file
-vim.api.nvim_create_autocmd("BufEnter", {
-   pattern = { "*.md", "text", "plaintex", "gitcommit", "markdown" },
+-- turn on column color for 50/72 rule commit message
+vim.api.nvim_create_autocmd("FileType", {
+   pattern = { "gitcommit" },
    callback = function()
-      vim.opt_local.spell = true
-      vim.opt.spelllang = { 'en', 'es' } -- Set NEOVIMS NATIVE spell lang for spellchecker
+      vim.opt_local.colorcolumn = { 50, 72 }
+      vim.opt_local.textwidth = 72
+      --vim.opt_local.formatoptions:append("t") -- auto-wrap by textwidth
    end,
 })
 
@@ -47,9 +51,9 @@ vim.api.nvim_create_autocmd("BufEnter", {
 vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.lua" },
    callback = function()
-      vim.opt.shiftwidth = 3
-      vim.opt.tabstop = 3
-      vim.opt.softtabstop = 3
+      vim.opt_local.shiftwidth = 3
+      vim.opt_local.tabstop = 3
+      vim.opt_local.softtabstop = 3
    end
 })
 
