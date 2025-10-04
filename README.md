@@ -14,6 +14,7 @@ Name : version
 - [Conky](https://github.com/brndnmtthws/conky) : 1.22.1
 - [Dunst](https://github.com/dunst-project/dunst) : 1.12.2
 - [fzf](https://github.com/junegunn/fzf) : 0.60
+- [git](https://github.com/git/git) : 2.47
 - Kernel : 6.12
 - [Picom](https://github.com/yshui/picom) : 12.5
 - [Polybar](https://github.com/polybar/polybar) : 3.7.2
@@ -23,3 +24,7 @@ Name : version
 - [Terminator](https://github.com/gnome-terminator/terminator) : 2.1.4
 - [Thunar](https://gitlab.xfce.org/xfce/thunar) : 4.20.2
 - [Xfce4 Terminal](https://gitlab.xfce.org/apps/xfce4-terminal) : 1.1.4
+
+## Scripts
+
+- [fzf-git.sh](https://github.com/junegunn/fzf-git.sh)
