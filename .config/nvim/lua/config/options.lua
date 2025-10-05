@@ -14,6 +14,9 @@ vim.opt.relativenumber = true
 -- show the status line at the bottom
 vim.opt.laststatus = 3
 
+-- enable 24-bit RGB colors
+vim.opt.termguicolors = true
+
 -- find recursively in sub-directories
 vim.opt.path:append("**")
 
@@ -82,6 +85,7 @@ vim.opt.scrolloff = 4  -- minimal number of screen lines to keep above and below
 vim.opt.sidescrolloff = 8  -- minimal number of screen columns either side of cursor if wrap is `false`
 vim.opt.sidescroll = 2  -- make scrolling better, instead of wrap we scroll horizontally with the cursor
 vim.opt.smoothscroll = true
+vim.opt.lazyredraw = true  -- faster scrolling
 
 -- line break
 vim.opt.wrap = false  -- don't wrap lines

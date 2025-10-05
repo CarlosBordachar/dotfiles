@@ -1,20 +1,20 @@
 -- only highlight when searching
-vim.api.nvim_create_autocmd("CmdlineEnter", {
-   callback = function()
-      local cmd = vim.v.event.cmdtype
-      if cmd == "/" or cmd == "?" then
-         vim.opt.hlsearch = true
-      end
-   end,
-})
-vim.api.nvim_create_autocmd("CmdlineLeave", {
-   callback = function()
-      local cmd = vim.v.event.cmdtype
-      if cmd == "/" or cmd == "?" then
-         vim.opt.hlsearch = false
-      end
-   end,
-})
+--vim.api.nvim_create_autocmd("CmdlineEnter", {
+--   callback = function()
+--      local cmd = vim.v.event.cmdtype
+--      if cmd == "/" or cmd == "?" then
+--         vim.opt.hlsearch = true
+--      end
+--   end,
+--})
+--vim.api.nvim_create_autocmd("CmdlineLeave", {
+--   callback = function()
+--      local cmd = vim.v.event.cmdtype
+--      if cmd == "/" or cmd == "?" then
+--         vim.opt.hlsearch = false
+--      end
+--   end,
+--})
 
 -- Highlight when yanking
 vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#f9e2af", fg = "#000000" })
