@@ -18,6 +18,7 @@ Name : version
 - Dolphin : 25.04.3
 - [fzf](https://github.com/junegunn/fzf) : 0.60.3
 - [Gimp](https://www.gimp.org) : 3.0.4
+- [git](https://github.com/git/git) : 2.47
 - [Inkscape](https://inkscape.org) : 1.4
 - KDE Plasma : 6.3.4
 - Kernel : 6.12
@@ -27,3 +28,6 @@ Name : version
 - [OpenSnitch](https://github.com/evilsocket/opensnitch) : 1.6.9
 - [Starship](https://github.com/starship/starship) : 1.22.1
 
+## Scripts
+
+- [fzf-git.sh](https://github.com/junegunn/fzf-git.sh)
