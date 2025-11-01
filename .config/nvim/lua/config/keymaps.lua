@@ -59,3 +59,11 @@ end
 
 map("n", "<leader>dd", toggle_diff, { desc = "Toggle Diff Mode Side-by-Side" })
 
+-- Surround
+map("v", "s{", "<esc>`>a}<esc>`<i{<esc>", { desc = "Surround with {} in visual mode" })
+map("v", "s[", "<esc>`>a]<esc>`<i[<esc>", { desc = "Surround with [] in visual mode" })
+map("v", "s(", "<esc>`>a)<esc>`<i(<esc>", { desc = "Surround with () in visual mode" })
+map("v", "s'", "<esc>`>a'<esc>`<i'<esc>", { desc = "Surround with '' in visual mode" })
+map("v", 's"', '<esc>`>a"<esc>`<i"<esc>', { desc = 'Surround with "" in visual mode' })
+map("v", "s<", "<esc>`>a><esc>`<i<<esc>", { desc = "Surround with <> in visual mode" })
+
