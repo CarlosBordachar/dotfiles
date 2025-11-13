@@ -1,0 +1,58 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "telemetry.feedback.enabled": false,
+    //"window.restoreWindows": "none",
+
+    // From VSCodium Debian
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.linkedEditing": true,
+    "editor.guides.bracketPairs": true,
+    "workbench.tree.indent": 25,
+    "workbench.tree.renderIndentGuides": "always",
+    "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'CommitMono Nerd Font', 'Hack Nerd Font', 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', 'Hasklug Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "normal",
+    "breadcrumbs.enabled": false,
+    "extensions.autoUpdate": false,
+    "workbench.sideBar.location": "left",
+    "explorer.autoReveal": "focusNoScroll",
+    "editor.rulers": [80, 120],
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "manual",
+    "window.menuBarVisibility": "compact",
+
+    // Theme
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "catppuccin.accentColor": "blue",
+    "catppuccin.italicKeywords": false,
+    "catppuccin.italicComments": true,
+    "catppuccin.boldKeywords": false,
+    "editor.semanticHighlighting.enabled": true,
+    "terminal.integrated.minimumContrastRatio": 1,
+    "window.titleBarStyle": "custom",
+    
+    // Icons
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.opacity": 0.75,
+    "material-icon-theme.saturation": 0.75,
+    
+    // Config por el solo uso de activar y desactivar cosas
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.statusBarItem.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": true,
+    "editor.minimap.enabled": false,
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    
+    // 'CaskaydiaCove Nerd Font', + 1
+    // 'CommitMono Nerd Font', +2
+    // 'Hack Nerd Font', +3
+    // 'JetBrainsMono Nerd Font', + 2
+    // 'FiraCode Nerd Font',  -4
+    // 'Hasklug Nerd Font', -2/3
+    // 'CaskaydiaCove Nerd Font', 'CommitMono Nerd Font', 'Hack Nerd Font', 'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', 'Hasklug Nerd Font', 
+}

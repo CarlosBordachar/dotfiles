@@ -31,3 +31,7 @@ fi
 # El symlink lo seteo en
 # /etc/udev/rules.d/99-logitech-c920-set-defaults.rules
 source $HOME/.config/scripts/webcam_set_defaults.sh /dev/webcam_c920
+
+# soporte nativo Wayland para apps Electron (VSCodium, etc.) con GPU Nvidia.
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export ELECTRON_ENABLE_FEATURES=WaylandWindowDecorations

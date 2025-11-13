@@ -22,5 +22,8 @@ alias dfl=dotfiles
 alias webcam='mpv --demuxer-lavf-o=video_size=1280x720,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency'
 alias pkginstalled='zgrep " install " /var/log/dpkg.log* | sort -t ":" -k2.1 -k2.6 -k2.9'
 
+# Alias para VSCodium en Wayland nativo (soluciona flickering Nvidia)
+alias codium='codium --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations'
+
 # keybindings for git with fzf. help: <Ctrl+G> <?>
 source $HOME/.config/scripts/fzf-git.sh

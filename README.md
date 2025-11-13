@@ -27,6 +27,7 @@ Name : version
 - [Neovim](https://github.com/neovim/neovim) : 0.10.4
 - [OpenSnitch](https://github.com/evilsocket/opensnitch) : 1.6.9
 - [Starship](https://github.com/starship/starship) : 1.22.1
+- [VS Codium](https://github.com/VSCodium/vscodium) : 1.105 (.deb)
 
 ## Scripts
 
