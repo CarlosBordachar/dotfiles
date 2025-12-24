@@ -1,4 +1,4 @@
-alias ll='ls -lashF'
+alias ll='ls -lashFv --group-directories-first'
 
 # Directories
 alias ..='cd ..'
