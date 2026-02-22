@@ -1,6 +1,6 @@
 # dotFiles
 
-Personal dotfiles.
+Personal dotFiles.
 
 ## Workspaces
 
@@ -36,6 +36,13 @@ Not all of them are necessary for a functional workspace.
 
 - Window Manager (compositor): [niri](https://github.com/niri-wm/niri)
 - Shell: [noctalia](https://github.com/noctalia-dev/noctalia-shell)
+- Terminal: [foot](https://codeberg.org/dnkl/foot)
+
+### KDE
+
+- Desktop Environment: [Plasma Desktop](https://github.com/KDE/plasma-desktop)
+- Terminal: [Konsole](https://github.com/KDE/konsole)
+- File Manager: [dolphin](https://github.com/KDE/dolphin)
 
 ### Terminals
 
