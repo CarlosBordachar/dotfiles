@@ -1,0 +1,44 @@
+# What is?
+Indica que archivos modifican a grandes rasgos lo que me interesa.
+
+## button.svgz
+
+El botón enter del login.
+El botón shutdown (en realidad "leave") cuando se presiona.
+El botón del bluetooth.
+El botón del brillo.
+
+## checkmarks.svg
+
+Los radiobuttons del audio.
+
+## lineedit.svgz
+
+El textbox del login.
+El textbox del clipboard.
+El textbox de buscar de network.
+
+## pager.svgz
+
+El selector de virtual desktops.
+
+## scrollbar.svgz
+
+La barra de scroll cuando se tienen muchas ventanas de la misma aplicación abiertas.
+
+## slider.svgz
+
+La barrita y círculo de ajuste del audio.
+
+## tabbar.svgz
+
+La línea de color del botón de inicio.
+
+## tasks.svgz
+
+La línea de color de las apps abiertas en la barra de tareas.
+
+# Cambio realizado
+
+El color original era un purpura: #bd93f9
+Y fue reemplazado por un azul: #93adf9
