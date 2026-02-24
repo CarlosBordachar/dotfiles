@@ -1,2 +1,6 @@
 [Layout]
+DisplayNames=,lat
+LayoutList=us,latam
 Model=pc105
+Use=true
+VariantList=altgr-intl,
