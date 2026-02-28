@@ -35,6 +35,7 @@ Not all of them are necessary for a functional workspace.
 ### Niri
 
 - Window Manager (compositor): [niri](https://github.com/niri-wm/niri)
+- Launcher: [Fuzzel](https://codeberg.org/dnkl/fuzzel)
 - Shell: [noctalia](https://github.com/noctalia-dev/noctalia-shell)
 - Terminal: [foot](https://codeberg.org/dnkl/foot)
 
