@@ -57,6 +57,10 @@ Not all of them are necessary for a functional workspace.
 
 - [VS Codium](https://github.com/VSCodium/vscodium)
 
+### Utils
+
+- PDF Reader : [zathura](https://github.com/pwmt/zathura) with zathura-pdf-poppler pluging
+
 ## How to use
 
 Apply configs using `stow` command line app, generating symbolic links.

@@ -1,0 +1,4 @@
+include themes/catppuccin-macchiato
+
+map i recolor
+set adjust-open "best-fit"
