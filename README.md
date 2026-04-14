@@ -55,6 +55,7 @@ Not all of them are necessary for a functional workspace.
 
 ### Develop
 
+- [Godot](https://github.com/godotengine/godot)
 - [VS Codium](https://github.com/VSCodium/vscodium)
 
 ### Utils
