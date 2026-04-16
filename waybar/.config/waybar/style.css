@@ -1,0 +1,135 @@
+@import "themes/catppuccin-macchiato.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-weight: 600;
+    font-size: 14px;
+    min-height: 0;
+    transition: all 0.1s ease;
+}
+
+window#waybar {
+    background: rgba(36, 39, 58, 0);
+    color: @subtext0;
+}
+
+#workspaces button {
+    border-radius: 8px 8px 3px 3px;
+    padding: 5px;
+    margin-right: 5px;
+    box-shadow: none;
+    text-shadow: none;
+    color: @subtext0;
+}
+
+#workspaces button.empty {
+    color: @surface2;
+    border: none;
+}
+
+#workspaces button.active {
+    color: @peach;
+}
+
+#workspaces button.focused {
+    border-bottom: solid 2px;
+    border-bottom-color: @mauve;
+    padding-bottom: 3px;
+    background: @mantle;
+    color: @mauve;
+}
+
+#workspaces button.urgent {
+    border-radius: 10px;
+    background: @red;
+    color: @base;
+}
+
+#workspaces button:hover {
+    border-radius: 8px;
+    background: @overlay2;
+    color: @mantle;
+}
+
+#custom-launcher,
+#workspaces,
+#mpris,
+#window,
+#language,
+#tray,
+#network,
+#backlight,
+#pulseaudio,
+#battery,
+#clock, 
+#custom-power {
+    background: @base;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 0px 0px;
+}
+
+#workspaces {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#mpris.paused {
+    color: @overlay0;
+}
+
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#tray {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#network.disable,
+#network.disconnected {
+    color: @red;
+}
+
+#pulseaudio.muted,
+#pulseaudio.microphone.source-muted {
+    color: @red;
+}
+
+#pulseaudio,
+#pulseaudio.microphone {
+    color: @teal;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @green;
+}
+
+@keyframes blink {
+    to {
+        color: @red;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @yellow;
+    /* border-bottom: 2px solid #bf616a; */
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#clock {
+    color: @lavender;
+}
+
+#custom-power {
+    color: @maroon;
+}
