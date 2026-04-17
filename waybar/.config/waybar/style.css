@@ -26,7 +26,6 @@ window#waybar {
 
 #workspaces button.empty {
     color: @surface2;
-    border: none;
 }
 
 #workspaces button.active {
@@ -34,8 +33,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-bottom: solid 2px;
-    border-bottom-color: @mauve;
+    border-bottom: 2px solid @mauve;
     padding-bottom: 3px;
     background: @mantle;
     color: @mauve;
@@ -49,26 +47,27 @@ window#waybar {
 
 #workspaces button:hover {
     border-radius: 8px;
-    background: @overlay2;
-    color: @mantle;
+    background: @subtext0;
+    color: @base;
 }
 
 #custom-launcher,
 #workspaces,
 #mpris,
 #window,
-#language,
 #tray,
+#language,
 #network,
 #backlight,
 #pulseaudio,
 #battery,
 #clock, 
 #custom-power {
-    background: @base;
-    border-radius: 10px;
+    /*border: 1px solid currentColor;*/
+    border-radius: 6px;
     padding: 0px 10px;
-    margin: 0px 0px;
+    margin: 0px 4px;
+    background: @base;
 }
 
 #workspaces {
@@ -77,7 +76,8 @@ window#waybar {
 }
 
 #mpris.paused {
-    color: @overlay0;
+    background: @surface2;
+    color: @base;
 }
 
 /* make window module transparent when no windows present */
@@ -86,8 +86,11 @@ window#waybar.empty #window {
 }
 
 #tray {
-    border-radius: 10px;
-    margin-right: 10px;
+    border-radius: 10px 4px 4px 10px;
+}
+
+#network {
+    color: @rosewater;
 }
 
 #network.disable,
@@ -103,6 +106,16 @@ window#waybar.empty #window {
 #pulseaudio,
 #pulseaudio.microphone {
     color: @teal;
+}
+
+#pulseaudio:not(.microphone) {
+    border-radius: 6px 0px 0px 6px;
+    margin-right: -3px;
+}
+
+#pulseaudio.microphone {
+    border-radius: 0px 6px 6px 0px;
+    margin-left: -3px;
 }
 
 #battery.charging,
@@ -133,3 +146,9 @@ window#waybar.empty #window {
 #custom-power {
     color: @maroon;
 }
+
+#custom-power:hover {
+    background: @maroon;
+    color: @base;
+}
+

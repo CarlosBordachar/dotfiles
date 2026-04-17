@@ -11,7 +11,7 @@
     "margin-right": 15,
     "margin-top": 7,
     "margin-bottom": 0,
-    "spacing": 4,
+    "spacing": 0,
     "modules-left": [
         "custom/launcher",
         "niri/workspaces",
@@ -21,8 +21,8 @@
         "niri/window"
     ],
     "modules-right": [
-        "niri/language",
         "tray",
+        "niri/language",
         "network",
         "backlight",
         "pulseaudio",
@@ -45,7 +45,7 @@
     "mpris": {
         "format": "{player_icon} {dynamic}",
         "format-paused": "{status_icon} {dynamic}",
-        "max-length": 50,
+        "max-length": 40,
         "player-icons": {
             "default": "⏸",
             "mpv": "🎵"
@@ -57,6 +57,7 @@
     },
     "niri/window": {
         "format": "{title}",
+        "max-length": 70,
         "icon": true,
         "icon-size": 16,
         "separate-outputs": true,
@@ -75,7 +76,7 @@
         "format-ethernet": "󰈀",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪  Disconnected",
-        "format-alt": "<span foreground='#a6da95'> {bandwidthDownBytes}</span> <span foreground='#ee99a0'> {bandwidthUpBytes}</span>",
+        "format-alt": "<span foreground='#8bd5ca'> {bandwidthDownBytes}</span> <span foreground='#ee99a0'> {bandwidthUpBytes}</span>",
         "tooltip": true,
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "tooltip-format-disconnected": "Disconnected",
@@ -96,7 +97,7 @@
     "pulseaudio": {
         "tooltip-format": "{desc} @ {volume}%",
         "format": "{icon} {volume}%",
-        "format-muted": "  Muted",
+        "format-muted": " Muted",
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": "{icon} Muted",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -122,7 +123,7 @@
         "format": "{format_source}",
         "rotate": 0,
         "format-source": "",
-        "format-source-muted": "  Muted",
+        "format-source-muted": " Muted",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
         //"on-click-middle": "volumecontrol.sh -i m",
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+",
@@ -193,7 +194,7 @@
         }
     },
     "custom/power": {
-        "format" : "⏻",
+        "format" : "",
         "tooltip": false,
         "rotate": 0,
         "on-click": "niri msg action quit",
