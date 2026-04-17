@@ -62,6 +62,7 @@ Not all of them are necessary for a functional workspace.
 ### Utils
 
 - PDF Reader : [zathura](https://github.com/pwmt/zathura) with zathura-pdf-poppler pluging
+- File Manager : [Yazi](https://github.com/sxyazi/yazi)
 
 ## How to use
 
