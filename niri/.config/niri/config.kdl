@@ -539,6 +539,8 @@ binds {
     Mod+Shift+WheelScrollDown { move-column-right; }
     Mod+Shift+WheelScrollUp   { move-column-left; }
 
+    Mod+Alt+MouseMiddle  { close-window; }
+
     // Similarly, you can bind touchpad scroll "ticks".
     // Touchpad scrolling is continuous, so for these binds it is split into
     // discrete intervals.
