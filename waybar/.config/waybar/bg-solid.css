@@ -1,0 +1,33 @@
+/* Background BAR */
+window#waybar,
+window.principal#waybar {
+/*    background: shade(alpha(@base, 0.9), 0.6); */
+    background: @crust;
+    border-bottom: 2px solid @base;
+}
+
+#custom-launcher,
+#workspaces,
+#mpris,
+#window,
+#hardware,
+#language,
+#keyboard-state,
+#tray,
+#network,
+#bluetooth,
+#backlight,
+#pulseaudio,
+#battery,
+#clock,
+#custom-power {
+    margin-bottom: 7px;
+}
+
+#custom-launcher {
+    margin-left: 0px;
+}
+
+#custom-power {
+    margin-right: 0px;
+}

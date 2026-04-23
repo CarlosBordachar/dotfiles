@@ -10,8 +10,17 @@
     transition: all 0.1s ease;
 }
 
-window#waybar {
-    background: rgba(36, 39, 58, 0);
+window#waybar,
+window.principal#waybar {
+    color:@subtext0;
+}
+
+tooltip {
+    background: @base;
+    border: 1px solid @surface2;
+}
+
+tooltip label {
     color: @subtext0;
 }
 
@@ -55,18 +64,21 @@ window#waybar {
 #workspaces,
 #mpris,
 #window,
-#tray,
+#hardware,
 #language,
+#keyboard-state,
+#tray,
 #network,
+#bluetooth,
 #backlight,
 #pulseaudio,
 #battery,
 #clock, 
 #custom-power {
-    /*border: 1px solid currentColor;*/
+    /* border: 1px solid currentColor; */
     border-radius: 6px;
     padding: 0px 10px;
-    margin: 0px 4px;
+    margin: 7px 4px;
     background: @base;
 }
 
@@ -85,17 +97,81 @@ window#waybar.empty #window {
     background-color: transparent;
 }
 
+#hardware,
+#temperature,
+#cpu,
+#memory,
+#disk {
+    padding: 0px 5px;
+    color: @overlay1;
+}
+
+#temperature.warning {
+    color: @yellow;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#language,
+#keyboard-state label {
+    color: @overlay1;
+}
+
+#keyboard-state label.capslock.locked {
+    color: @mauve;
+}
+
 #tray {
     border-radius: 10px 4px 4px 10px;
 }
 
 #network {
-    color: @rosewater;
+    color: @subtext0;
 }
 
 #network.disable,
 #network.disconnected {
     color: @red;
+}
+
+#bluetooth,
+#bluetooth.no-controller {
+    color: @overlay1;
+}
+
+#bluetooth.off,
+#bluetooth.disabled {
+    color: @red;
+}
+
+#bluetooth.on {
+    color: @subtext0;
+}
+
+#bluetooth.pairable {
+    color: @teal;
+}
+
+#bluetooth.connected {
+    color: @blue;
+}
+
+@keyframes blinkToMauve {
+    to {
+        color: @mauve;
+    }
+}
+
+#bluetooth.discoverable,
+#bluetooth.discovering {
+    color: @blue;
+    animation-name: blinkToMauve;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #pulseaudio.muted,
@@ -108,22 +184,12 @@ window#waybar.empty #window {
     color: @teal;
 }
 
-#pulseaudio:not(.microphone) {
-    border-radius: 6px 0px 0px 6px;
-    margin-right: -3px;
-}
-
-#pulseaudio.microphone {
-    border-radius: 0px 6px 6px 0px;
-    margin-left: -3px;
-}
-
 #battery.charging,
 #battery.plugged {
     color: @green;
 }
 
-@keyframes blink {
+@keyframes blinkToRed {
     to {
         color: @red;
     }
@@ -132,7 +198,7 @@ window#waybar.empty #window {
 #battery.critical:not(.charging) {
     color: @yellow;
     /* border-bottom: 2px solid #bf616a; */
-    animation-name: blink;
+    animation-name: blinkToRed;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -151,4 +217,45 @@ window#waybar.empty #window {
     background: @maroon;
     color: @base;
 }
+
+/* PILLS */
+#hardware {
+    border-radius: 6px 0px 0px 6px;
+    margin-right: -3px;
+}
+
+#language {
+    border-radius: 0px;
+    margin-left: -3px;
+    margin-right: -5px;
+}
+
+#keyboard-state {
+    border-radius: 0px 6px 6px 0px;
+    margin-left: -5px;
+}
+
+#network {
+    border-radius: 6px 0px 0px 6px;
+    margin-right: -3px;
+}
+
+#bluetooth {
+    border-radius: 0px 6px 6px 0px;
+    margin-left: -3px;
+}
+
+#pulseaudio:not(.microphone) {
+    border-radius: 6px 0px 0px 6px;
+    margin-right: -3px;
+}
+
+#pulseaudio.microphone {
+    border-radius: 0px 6px 6px 0px;
+    margin-left: -3px;
+}
+
+/* Apply TRANSPARENT or SOLID background */
+@import "bg-solid.css";
+@import "bg-transparent.css";
 
