@@ -2,7 +2,7 @@
     "custom/launcher": {
         "format": "",
         "on-click": "fuzzel",
-        "on-click-right": "niri msg action show-hotkey-overlay",
+        "on-click-right": "~/.config/scripts/fuzzel-powermenu.sh",
         "tooltip": false
     },
     "niri/workspaces": {
@@ -242,8 +242,8 @@
         //"on-click": "niri msg action quit",
         //"on-click-middle": "killall -SIGUSR2 waybar",
         //"on-click-right": "niri msg action power-off-monitors"
-        "on-click": "~/.config/waybar/scripts/powermenu.sh",
-        "on-click-middle": "~/.config/waybar/scripts/powermenu.sh -r",
-        "on-click-right": "~/.config/waybar/scripts/powermenu.sh -m"
+        "on-click": "~/.config/waybar/scripts/powermodule.sh",
+        "on-click-middle": "~/.config/waybar/scripts/powermodule.sh -r",
+        "on-click-right": "~/.config/waybar/scripts/powermodule.sh -m"
     }
 }

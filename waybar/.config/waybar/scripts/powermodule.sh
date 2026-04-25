@@ -4,7 +4,7 @@ show_help() {
     echo "Usage:"
     echo " $0 [OPTIONS]"
     echo
-    echo "Invoke wlogout or quit niri action"
+    echo "Invoke powermenu script at ~/.config/scripts"
     echo
     echo "Options:"
     echo "  -m           Power-off monitors"
@@ -12,22 +12,15 @@ show_help() {
     echo "  -h, --help   Show help"
     echo
     echo "e.g.:"
-    echo "  $0      # wlogout"
+    echo "  $0      # ~/.config/scripts/powermenu.sh"
     echo "  $0 -m   # power-off monitors"
     echo "  $0 -r   # refresh waybar"
     exit 1
 }
 
-HAS_WLOGOUT=0
-command -v wlogout >/dev/null 2>&1 && HAS_WLOGOUT=1
-
 case "$1" in
     "")
-        if [ $HAS_WLOGOUT = 1 ]; then
-            wlogout
-        else
-            niri msg action quit
-        fi
+        ~/.config/scripts/powermenu.sh
         ;;
     -m|m)
         niri msg action power-off-monitors
