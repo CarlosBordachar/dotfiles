@@ -2,3 +2,8 @@ $include /etc/inputrc
 
 # make autocompletion case insensitive
 set completion-ignore-case On
+
+$if Bash
+    # history expansion: Expand !... after space. (!$ or !! or !:2)
+    Space: magic-space
+$endif
