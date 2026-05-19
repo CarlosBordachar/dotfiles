@@ -51,6 +51,9 @@
     # custom log tab
     lgt = log --pretty=tformat:'%C(yellow)%h %C(magenta)%>(18,trunc)%ad %C(italic dim blue)%<(12,trunc)%an %C(reset)%s%C(auto)%d' --decorate --graph --abbrev-commit --date=iso
 
+    # custom log fuller
+    lgf = lgt --format=fuller
+
     # ########################################### #
     # requires fzf-git.sh sourced in bash_aliases #
     # ########################################### #
@@ -60,4 +63,8 @@
 
     # rebase interactive
     rbi = !bash -ic _fzf_git_hashes | xargs -o git rebase --interactive --autosquash
+
+    # rebase interative with original dates
+    rbid = !bash -ic _fzf_git_hashes | xargs -o git -c rebase.instructionFormat='%s%nexec GIT_COMMITTER_DATE=\"%cD\" git commit --amend --no-edit' rebase --interactive --autosquash
+
 
