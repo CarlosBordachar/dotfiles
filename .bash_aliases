@@ -10,9 +10,9 @@ alias gcd='cd "$(git rev-parse --show-cdup)"'
 # -I : prompt once before removing more than three files, or when removing recursively;
 #      less intrusive than -i, while still giving protection against most mistakes.
 # Override with rm -f
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+alias rm='rm -i -v'
+alias cp='cp -i -v'
+alias mv='mv -i -v'
 
 alias cat='batcat --paging=never'
 alias catplain='cat --style=plain'
@@ -21,6 +21,8 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dfl=dotfiles
 alias webcam='mpv --demuxer-lavf-o=video_size=1280x720,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency'
 alias pkginstalled='zgrep " install " /var/log/dpkg.log* | sort -t ":" -k2.1 -k2.6 -k2.9'
+# exit without saving current session history
+alias exitnohistory='unset HISTFILE && exit'
 
 # Alias para VSCodium en Wayland nativo (soluciona flickering Nvidia)
 alias codium='codium --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations'
