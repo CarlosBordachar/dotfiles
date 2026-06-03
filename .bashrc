@@ -112,6 +112,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# ignore commands to save in history
+HISTIGNORE="ll:history:exit:git st:git lg:git lg[ft]"
 
 # launch starship
 eval "$(starship init bash)"
