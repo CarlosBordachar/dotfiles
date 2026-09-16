@@ -57,3 +57,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
    end
 })
 
+-- set `jq` as the JSON file formatter. Usage: `gq%`. Command: `:%!jq .`
+vim.api.nvim_create_autocmd("FileType", {
+   pattern = { "json" },
+   callback = function()
+      vim.opt_local.formatprg = "jq ."
+   end
+})
