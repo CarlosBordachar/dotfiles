@@ -1,0 +1,14 @@
+[Added Associations]
+image/apng=qimgv.desktop;firefox-esr.desktop;display-im7.q16.desktop;gimp.desktop;
+image/gif=qimgv.desktop;firefox-esr.desktop;display-im7.q16.desktop;gimp.desktop;
+image/jpeg=qimgv.desktop;firefox-esr.desktop;display-im7.q16.desktop;gimp.desktop;
+image/png=qimgv.desktop;firefox-esr.desktop;display-im7.q16.desktop;gimp.desktop;
+video/x-mjpeg=qimgv.desktop;firefox-esr.desktop;display-im7.q16.desktop;gimp.desktop;
+
+[Default Applications]
+image/apng=qimgv.desktop;
+image/gif=qimgv.desktop;
+image/jpeg=qimgv.desktop;
+image/png=qimgv.desktop;
+video/x-mjpeg=qimgv.desktop;
+x-scheme-handler/http=firefox-esr.desktop;
